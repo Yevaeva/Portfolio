@@ -7,7 +7,7 @@ import './Skills.scss'
 import { Motion, spring } from 'react-motion';
 
 
-const Skills = () => {
+const Skills = (props) => {
     const skills = [
         { type: "HTML, CSS", level: 85 },
         { type: "JavaScript", level: 60 },
@@ -31,16 +31,9 @@ const Skills = () => {
     useEffect(() => {
         window.addEventListener('wheel', (e) => {
             if (window.scrollY > refSkill.current.offsetTop - 200) {
-                console.log(refSkill + " was hit")
                 setHit(true);
                 let skillbar = document.getElementsByClassName('bar')
-                console.log(skillbar);
-                // setTimeout(()=> {
-                //     skillbar[0].style.width='95%'
-
-                // },0)
-
-
+      
             }
 
         })
@@ -133,7 +126,7 @@ const Skills = () => {
 
                     {softSkills.map((skill, index) => {
                         return (
-                            <div className='skillContainer'>
+                            <div key={index} className='skillContainer'>
                                 <div className='skillText'>
                                     <p>{skill}</p>
                                 </div>

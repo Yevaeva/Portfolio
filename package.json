@@ -12,6 +12,8 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
+    "email-validator": "^2.0.4",
+    "google-map-react": "^2.1.9",
     "hamburger-react": "^2.4.0",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
@@ -26,6 +28,8 @@
     "react-router-hash-link": "^2.4.0",
     "react-scripts": "4.0.3",
     "react-scrollspy": "^3.4.3",
+    "react-spring": "^8.0.27",
+    "react-toastify": "^7.0.3",
     "react-transition-group": "^4.4.1",
     "web-vitals": "^1.1.0"
   },

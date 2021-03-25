@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef,useEffect} from 'react'
 import './Education.scss'
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
@@ -32,7 +32,7 @@ const Education = () => {
             about: "Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam."
         },
     ]
-
+    
     const isTabletOrMobile = useMediaQuery({ query: '(max-width:600px)' })
 
 

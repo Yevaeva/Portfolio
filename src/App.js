@@ -9,6 +9,11 @@ import About from './components/about/About';
 import Education from './components/education/Education';
 import Skills from './components/skills/Skills';
 import Projects from './components/projects/Projects';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
+import Modal from './components/modalProject/Modal';
+import Portfolio from './components/Portfolio';
+
 
 
 function App() {
@@ -24,20 +29,17 @@ function App() {
         <Spinner /> :
         <div id="app">
           <Switch>
-            <Route path='/' exact><NavBar outerContainerId={"app"} /></Route>
+          
+            <Route path='/' exact component={Portfolio} />
             <Route path='/404' exact><NotFound /></Route>
             <Redirect to='/404' />
           </Switch>
-          
-          <About />
-          <Education />
-          <Skills />
-          <Projects />
-         
+
+
         </div>
 
       }
-   
+
 
     </>
   );

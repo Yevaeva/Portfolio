@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef,useEffect} from 'react'
 import Main from '../main/Main'
 import './About.scss'
 import Slide from 'react-reveal/Slide';
@@ -8,6 +8,7 @@ import Pulse from 'react-reveal/Pulse';
 
 const About = () => {
 
+    
 
     return (
         <div>

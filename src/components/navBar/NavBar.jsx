@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect,useRef } from 'react'
 import './NavBar.scss'
 import { NavLink } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
@@ -11,6 +11,8 @@ import { NavHashLink } from 'react-router-hash-link';
 
 const NavBar = (props) => {
   let [scroll, setScroll] = useState(false)
+  let [openToggle,setOpenToggle] = useState(false)
+  
 
   useEffect(() => {
     document.addEventListener('scroll', () => {
@@ -22,9 +24,6 @@ const NavBar = (props) => {
     })
   })
 
-  const handleOnClose = () => {
-
-  }
   const showSettings = (event) => {
     event.preventDefault();
 
@@ -66,11 +65,23 @@ const NavBar = (props) => {
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
 }
 
+const handleNavClick = () => {
+
+setOpenToggle(false)
+console.log(openToggle);
+}
+
+const handleStateChange = (state) => {
+
+  setOpenToggle(state.isOpen)  
+  }
+
 
   return (
 
     <>
-      <div className={scroll && !isTabletOrMobile ? 'nav navShadow' : 'nav'}>
+    {console.log(props.disabled)}
+      <div style={props.disabled ? {pointerEvents: "none",filter: 'blur(0.7px)'} : {}} className={scroll && !isTabletOrMobile ? 'nav navShadow' : 'nav'}>
 
         <NavHashLink
           smooth to="/#home" >
@@ -83,16 +94,20 @@ const NavBar = (props) => {
             <Menu
               {...props}
               right
+              isOpen={openToggle}
+              onStateChange={(state) => handleStateChange(state)}
             >
               {links.map((link, index) => {
                 return (
                   <NavHashLink
+                  onClick={handleNavClick}
                   scroll={el => scrollWidthOffset(el)}
                     key={index}
                     className="menu-item"
                     smooth to={link.value}
                     activeClassName="selected"
                     activeStyle={{ color: 'white' }}
+                
                   >
                     {link.label}
                   </NavHashLink>
