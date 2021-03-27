@@ -9,7 +9,7 @@ $green:rgb(94, 255, 0);
     opacity: 0;
     transition: opacity 0.2s linear;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 100; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -27,11 +27,13 @@ $green:rgb(94, 255, 0);
     padding: 20px 20px 5px;
     border: 1px solid #888;
     width: 60%;
+    z-index: 1200;
     .project {
       padding: 10px 20px 20px;
     }
     .aboutProject {
       text-align: justify;
+      line-height: 1.4;
     }
 
     .projectSkills {
@@ -55,6 +57,7 @@ $green:rgb(94, 255, 0);
     }
   }
   
+  
   /* The Close Button */
   .close {
     color: #aaaaaa;
@@ -69,6 +72,7 @@ $green:rgb(94, 255, 0);
     text-decoration: none;
     cursor: pointer;
   }
+  
 
   @media only screen and (max-width: 768px){
     .projWrapper{
@@ -76,6 +80,14 @@ $green:rgb(94, 255, 0);
         width: 75%;
       }
     } 
+    .also {
+      top: 325px!important;
+      p {
+        padding: 0;
+        white-space: nowrap!important;
+    
+    }
+    }
     .modal-content {
       width: 70%;
       padding:0;

@@ -19,12 +19,14 @@ const About = () => {
             <Pulse right>
                 <div   className='about'>
                     <h2 >Who am I</h2>
-                    <p >Hi. I am a web developer.I am looking for a internship position,
-                    doing programming and studying for 2 years now. I really like it a
-                    nd I am ready to develop in this direction. I wish you to be useful
-                    to the employer, ready to get used to any working conditions and master
-                    new technologies. I will be glad to any of your suggestions, i am ready
-                    to work on experience.
+                    <p >Hi, I am a future Web developer. I have worked in the banking sector for several years, but I have been
+                        also interested in the programming for a long time. Now I'm on childcare leave.
+                        During this period, I have taken the opportunity to learn and acquire a new profession. I'm always in for
+                        learning new stuff, seeking to improve and grow as a professional and as a person. I enjoy solving
+                        complex problems.
+                        As an energetic and imaginative young web developer I am able to work alongside another talented IT
+                        professionals for creating websites. Right now I am in the seek of an internship position or an entry level
+                        position with an exciting company.    
                 </p>
                 </div>
             </Pulse>

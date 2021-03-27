@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Main.scss'
-import Pdf from '../../yeva.terteryan.CV.pdf'
+import Pdf from '../../files/Yeva_Terteryan_CV.pdf'
 
 
 const Main = () => {
@@ -51,7 +51,7 @@ const Main = () => {
             </p>
             </div>
             <button >
-                <Link to={Pdf} target="_blank">Download my CV</Link>
+                <a href={Pdf} target="_blank">Download my CV</a>
             </button>
         </div>
         

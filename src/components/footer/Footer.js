@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
 
     let year = new Date().getFullYear();
-
+ 
     return (
         <div className='footer'>
             <p><span>&copy; </span>{ year}</p>

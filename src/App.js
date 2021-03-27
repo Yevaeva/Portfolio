@@ -17,11 +17,11 @@ import Portfolio from './components/Portfolio';
 
 
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 1000)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(() => setLoading(false), 1000)
+  // }, [])
   return (
 
     <>

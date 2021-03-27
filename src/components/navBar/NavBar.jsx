@@ -68,7 +68,7 @@ const NavBar = (props) => {
 const handleNavClick = () => {
 
 setOpenToggle(false)
-console.log(openToggle);
+
 }
 
 const handleStateChange = (state) => {
@@ -80,7 +80,6 @@ const handleStateChange = (state) => {
   return (
 
     <>
-    {console.log(props.disabled)}
       <div style={props.disabled ? {pointerEvents: "none",filter: 'blur(0.7px)'} : {}} className={scroll && !isTabletOrMobile ? 'nav navShadow' : 'nav'}>
 
         <NavHashLink

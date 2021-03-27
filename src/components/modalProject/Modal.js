@@ -26,24 +26,32 @@ let [project,setProject] = useState({})
     {
       id: 1,
       title: 'To Do List',
-      about: 'This is a project loremEst velit velit ea Lorem culpa ut consectetur aliqua ullamco qui fugiat. Ex non cillum consequat do commodo eiusmod. Aute proident aute elit reprehenderit dolor dolor ipsum ullamco pariatur. Exercitation duis eiusmod ipsum proident incididunt voluptate exercitation in consectetur et. Eu fugiat labore consequat cupidatat qui enim fugiat ex duis id. Reprehender',
-      skills: 'React',
+      about: 'This is a task managment tool in React, with the abilities of searching, sorting and filtering options.'+
+      ' You can sort tasks or filter tasks by status(done, active) and date. '+
+     'There are options for deleting tasks one by one, as well as deleting several at a time.'+
+     'There is an opportunity to edit the task, which is organized through the modal window.'+
+     'You can change the task done or active.'+
+     ' If you enter non-existent pages on the site, you will be redirected to 404 page, which contain a message that the desired page does not exist.'+
+     '',
+      skills: 'React.js, Redux, React Bootstrap, RESTful APIs',
       github: 'https://github.com/Yevaeva/ToDoList',
       link: 'https://todolistfortasks.netlify.app/'
     },
     {
       id: 2,
       title: 'Messanger',
-      about: 'This is a project',
-      skills: 'React',
+      about: 'This is a class chat. You can register and log in, then  select or create a class and join a group chat ․'+
+      'You can see who are in the selected room online. It shows you when someone is typing. I write the front-end of a website and'+
+      ' the back-end is a team work.',
+      skills: 'React.js, Node.js, Express, Mongo db, Socket.io',
       github: 'https://github.com/Yevaeva/Messanger',
       link: 'https://yevaeva.github.io/Messanger/'
     },
     {
       id: 3,
       title: 'Tic Tac Toe',
-      about: 'This is a project',
-      skills: 'React',
+      about: 'Tic-tac-toe is a game in which two players take turns in drawing either an "O" or an "X" in one square of a grid consisting of nine squares. The winner is the first player to get three of the same symbols in a row.',
+      skills: 'JavaScript, HTML, CSS',
       github: 'https://codepen.io/yevaeva/pen/poRvqxr',
       link: 'https://codepen.io/yevaeva/full/poRvqxr'
     },
@@ -53,7 +61,7 @@ let [project,setProject] = useState({})
       about: 'This is a project',
       skills: 'React',
       github: 'https://github.com/Yevaeva/Portfolio',
-      link: ''
+      link: 'https://yevaeva.github.io/Portfolio/'
     },
   ]
  useEffect(()=>{
@@ -83,7 +91,7 @@ let [project,setProject] = useState({})
               <h2 className='title'>
                 {project.title}
               </h2>
-              <div className='aboutProject'>{project.about}</div>
+              <p className='aboutProject'>{project.about}</p>
               <div className='projectSkills'>Used stack: {project.skills}</div>
               <div className='githubContainer'>
               <a href={project.github} target="_blank">
@@ -93,6 +101,7 @@ let [project,setProject] = useState({})
               <button>
                 <a href={project.link} target="_blank" >Visit Website</a>
               </button>
+              
             </div>
       </div>
 

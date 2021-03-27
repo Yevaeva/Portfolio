@@ -11,6 +11,7 @@ $green:rgb(94, 255, 0);
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 10px;
+    position: relative;
 
     .item {
         width: 45%;
@@ -18,6 +19,7 @@ $green:rgb(94, 255, 0);
     }
     .big {
       width: 65%;
+      margin: auto;
     }
    
 
@@ -87,4 +89,23 @@ $green:rgb(94, 255, 0);
           font-size: 20px;
           font-weight: bold;
       }
+
+      .also{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -55%);
+        p{
+          writing-mode: vertical-rl;
+          text-orientation: sideways;
+ 
+            white-space: pre-line; 
+        }
+        a {
+          color: $green;
+          &:hover{
+            color: $color;
+          }
+        }
+      } 
 }

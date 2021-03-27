@@ -52,7 +52,7 @@ const Contact = () => {
             });
         }
         else {
-            fetch('http://localhost:3001/form', {
+            fetch('https://portfolio-yevaeva.herokuapp.com/form', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"

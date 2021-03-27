@@ -12,24 +12,29 @@ const Education = () => {
 
     const eduLists = [
         {
-            year: "2021",
-            about: "Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam."
+            year: "01.12.2020-01.03.2021",
+            where:'"Bitschool" IT and business school',
+            about: "React.JS"
         },
         {
-            year: "2020 september",
-            about: "Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam."
+            year: "01.11.2020-01.02.2021",
+            where:'"Sunny School" Training Center',
+            about: "Node js"
         },
         {
-            year: "2020 november",
-            about: "Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam."
+            year: "01.07.2020-01.09.2020",
+            where:'RUSSIAN-ARMENIAN UNIVERSITY',
+            about: 'Fundamentals of Programming, basics of programming C++'
         },
         {
-            year: "2020",
-            about: "Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam."
+            year: "01.05.2020-01.09.2020",
+            where:`UNDP IMPACTAIM ACCELERATOR #5`,
+            about: "Basics of programming, HTML/CSS, Javascript"
         },
         {
             year: "2009-2013",
-            about: "Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam."
+            where:`Armenian State University of Economics `,
+            about: `Regulation of Economy & International Economic Relation`
         },
     ]
     
@@ -51,6 +56,7 @@ const Education = () => {
                        
                                         <div className="content">
                                             <h2>{edu.year}</h2>
+                                            <h4>{edu.where.toUpperCase()}</h4>
                                             <p>{edu.about}</p>
                                         </div>
                                     </div>
@@ -64,6 +70,7 @@ const Education = () => {
                                 <div className="right">
                                     <div className="content">
                                         <h2>{edu.year}</h2>
+                                        <h4>{edu.where.toUpperCase()}</h4>
                                         <p>{edu.about}</p>
                                     </div>
                                 </div>

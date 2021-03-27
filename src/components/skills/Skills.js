@@ -13,6 +13,7 @@ const Skills = (props) => {
         { type: "JavaScript", level: 60 },
         { type: "SCSS, BootStrap", level: 70 },
         { type: "React.js, Redux", level: 50 },
+        { type: "Node.js, Express", level: 25 },
         { type: "Git", level: 45 },
     ];
 
