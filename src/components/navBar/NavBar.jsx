@@ -104,8 +104,8 @@ const handleStateChange = (state) => {
                     key={index}
                     className="menu-item"
                     smooth to={link.value}
-                    activeClassName="selected"
-                    activeStyle={{ color: 'white' }}
+                    // activeClassName="selected"
+                    // activeStyle={{ color: 'white' }}
                 
                   >
                     {link.label}
@@ -123,8 +123,8 @@ const handleStateChange = (state) => {
                     key={index}
                     className="menu-item"
                     smooth to={link.value}
-                    activeClassName="selected"
-                    activeStyle={{ color: 'white' }}
+                    // activeClassName="selected"
+                    // activeStyle={{ color: 'white' }}
                   >
                     {link.label}
                   </NavHashLink>
