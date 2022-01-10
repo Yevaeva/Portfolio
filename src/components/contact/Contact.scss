@@ -1,234 +1,215 @@
-$bgColor: rgba(49,49,58,1);
+$bgColor: rgba(49, 49, 58, 1);
 $color: rgba(255, 255, 255, 0.5);
-$green:rgb(94, 255, 0);
-
+$green: rgb(94, 255, 0);
 
 .map {
-    width: 100%;
-    height: 35vh;
- 
+  width: 100%;
+  height: 35vh;
 }
 
 .mapContact {
-    position: relative;
+  position: relative;
 
-    button:first-child {
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        text-align: center;
-        z-index: 99;
-        background-color: $green;
-        border: none;
-        outline: none;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        padding: 7px 35px;
-        color: $bgColor;
-        font-weight: bold;
-        transition: 0.5s;
+  button:first-child {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 99;
+    background-color: $green;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 7px 35px;
+    color: $bgColor;
+    font-weight: bold;
+    transition: 0.5s;
+  }
 
-
+  .addressWraper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: $color;
+    div {
+      text-align: center;
+      h5 {
+        padding: 5px;
+      }
     }
+  }
 
-    .addressWraper{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        color: $color;
-        div {
-            text-align: center;
-            h5{
-                padding: 5px;
-            }
-        }
-    }
+  h2 {
+    padding: 30px 0 40px;
+  }
 
-    h2 {
-        padding:30px 0 40px;
-
-    }
-
-    input{
-        width:100%;
-        padding-top:10px;
-        background:none;
-        outline:none;
-        resize:none;
-        border:0;
-        transition:all .5s;
-        border-bottom:2px solid $color;
-        color: white;
-        font-size: 20px;
-    }
-input:focus{
-    border-bottom:2px solid $green;
+  input {
+    width: 100%;
+    padding-top: 10px;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    transition: all 0.5s;
+    border-bottom: 2px solid $color;
+    color: white;
+    font-size: 20px;
+  }
+  input:focus {
+    border-bottom: 2px solid $green;
     + .label {
-        transform: translateY(-24px);
-    font-size: 15px;
-
-        color: $green;
+      transform: translateY(-24px);
+      font-size: 15px;
+      color: $green;
     }
-}
+  }
 
-
-button:hover {
+  button:hover {
     background-color: $color;
     color: $green;
-}
+  }
 }
 
 .form {
-    margin: 50px 10px;
-    button {
-        margin: auto;
-        display: block;
-        background-color: $green;
-        color: $bgColor;
-        padding:10px 25px;
-        font-weight: bold;
-        transition: 0.5s;
-    }
+  margin: 50px 10px;
+  button {
+    margin: auto;
+    display: block;
+    background-color: $green;
+    color: $bgColor;
+    padding: 10px 25px;
+    font-weight: bold;
+    transition: 0.5s;
+  }
 }
 
 .label {
-    position: absolute;
-    left: 1px;
-    bottom: 11px;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 400;
-    color: white;
-    cursor: text;
-    transition: all .2s ease-in-out;
- }
- .fill {
-    transform: translateY(-24px);
-    font-size: 15px;
- }
- .side {
-     display: flex;
-     justify-content: space-around;
- }
-
- .nameWrapper, .emailWrapper {
-     position: relative;
-         width:40%;
-
- }
- .messageWrapper {
-    position: relative;
-    width:90%;
-    margin:50px auto;
- }
-
-.addressWraper div:nth-child(2){
-    padding-left: 28px;
+  position: absolute;
+  left: 1px;
+  bottom: 11px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: white;
+  cursor: text;
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+}
+.fill {
+  transform: translateY(-24px);
+  font-size: 15px;
+}
+.side {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
 }
 
+.nameWrapper,
+.emailWrapper {
+  position: relative;
+  width: 100%;
+}
+.messageWrapper {
+  position: relative;
+  width: 90%;
+  margin: 50px auto;
+}
 
+.addressWraper div:nth-child(2) {
+  padding-left: 28px;
+}
 
 .contactModal {
-    transition: opacity 1s linear;
-    position: absolute; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    padding-top: 35px;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(138, 138, 138, 0.5); /* Black w/ opacity */
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-  }
+  transition: opacity 1s linear;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding-top: 35px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(138, 138, 138, 0.5); /* Black w/ opacity */
+}
 
-  
 .heart {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: $green;
-    height: 50px;
-    width: 50px;
-    transform: rotate(-45deg);
-    animation-name: beat;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-  }
-  .heart:after {
-    background-color: $green;
-    content: "";
-    border-radius: 50%;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 0px;
-    left: 25px;
-    
-  }
-  .heart:before {
-    background-color: $green;
-    content: "";
-    border-radius: 50%;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: -25px;
-    left: 0px;
-   
-  }
-  
-  
-  
-  @keyframes beat {
-    0% {
-      transform: scale(1) rotate(-45deg);
-    }
-    50% {
-      transform: scale(0.6) rotate(-45deg);
-    
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $green;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+  animation-name: beat;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.heart:after {
+  background-color: $green;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+.heart:before {
+  background-color: $green;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}
 
-    }
+@keyframes beat {
+  0% {
+    transform: scale(1) rotate(-45deg);
   }
-  .map p {
-      position: absolute;
-    //   margin: auto;
-      top: 62%;
-      left: 0;
-      right: 0;
-      text-align: center;
-      color: $color;
+  50% {
+    transform: scale(0.6) rotate(-45deg);
   }
+}
+.map p {
+  position: absolute;
+  top: 62%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: $color;
+}
+.required {
+  color: red;
+}
 
-  
+@media only screen and (max-height: 1500px) {
+  .map {
+    height: 47vh;
+  }
+}
 
- @media only screen and (max-height: 1500px){
-    .map {
-        height: 47vh;
-    }
- }
-  
- @media only screen and (max-height: 1000px){
-    .map {
-        height: 60vh;
-    }
- }
- @media only screen and (max-height: 780px){
-    .map {
-        height: 80vh;
-    }
- }
- @media only screen and (max-height: 600px){
-    .map {
-        height: 100vh;
-    }
- }
- 
-  
-  
+@media only screen and (max-height: 1000px) {
+  .map {
+    height: 60vh;
+  }
+}
+@media only screen and (max-height: 780px) {
+  .map {
+    height: 80vh;
+  }
+}
+@media only screen and (max-height: 600px) {
+  .map {
+    height: 100vh;
+  }
+}
