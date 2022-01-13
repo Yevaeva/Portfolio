@@ -1,96 +1,91 @@
-$bgColor: rgba(49,49,58,1);
+$bgColor: rgba(49, 49, 58, 1);
 $color: rgba(255, 255, 255, 0.5);
-$green:rgb(94, 255, 0);
-
-
+$green: rgb(94, 255, 0);
 
 .modal {
-    // visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s linear;
-    position: fixed; /* Stay in place */
-    z-index: 100; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  // visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: $bgColor;
+  color: $color;
+  margin: auto;
+  padding: 20px 20px 5px;
+  border: 1px solid #888;
+  width: 60%;
+  z-index: 1200;
+  .project {
+    padding: 10px 20px 20px;
+  }
+  .aboutProject {
+    text-align: justify;
+    line-height: 1.4;
   }
 
-  .modal-content {
-    background-color: $bgColor;
-    color: $color;
-    margin: auto;
-    padding: 20px 20px 5px;
-    border: 1px solid #888;
-    width: 60%;
-    z-index: 1200;
-    .project {
-      padding: 10px 20px 20px;
-    }
-    .aboutProject {
-      text-align: justify;
-      line-height: 1.4;
-    }
-
-    .projectSkills {
-      padding: 15px 0;
-    }
-    .githubContainer{
-      margin-bottom: 20px;
-      a {
-        color: $green;
-        padding:0;
-        &:hover {
-          color:$color;
-        }
-      }
-    } 
-    button {
-      color: $color;
+  .projectSkills {
+    padding: 15px 0;
+  }
+  .githubContainer {
+    margin-bottom: 20px;
+    a {
+      color: $green;
+      padding: 0;
+      padding-right: 10px;
       &:hover {
-        color: black;
+        color: $color;
       }
     }
   }
-  
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  button {
+    color: $color;
+    &:hover {
+      color: black;
+    }
   }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
+}
 
-  @media only screen and (max-width: 768px){
-    .projWrapper{
-      .item {
-        width: 75%;
-      }
-    } 
-    .also {
-      top: 325px!important;
-      p {
-        padding: 0;
-        white-space: nowrap!important;
-    
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .projWrapper {
+    .item {
+      width: 75%;
     }
-    }
-    .modal-content {
-      width: 70%;
-      padding:0;
-    }
-    
   }
+  .also {
+    top: 325px !important;
+    p {
+      padding: 0;
+      white-space: nowrap !important;
+    }
+  }
+  .modal-content {
+    width: 70%;
+    padding: 0;
+  }
+}

@@ -43,8 +43,10 @@ const Skills = (props) => {
 
   useEffect(() => {
     window.addEventListener("wheel", (e) => {
-      if (window.scrollY > refSkill.current.offsetTop - 200) {
-        setHit(true);
+      if (refSkill?.current !== null) {
+        if (window.scrollY > refSkill?.current?.offsetTop - 200) {
+          setHit(true);
+        }
       }
     });
   }, []);

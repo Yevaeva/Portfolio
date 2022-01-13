@@ -1,140 +1,122 @@
-import React from 'react'
-import { useState, useEffect,useRef } from 'react'
-import './NavBar.scss'
-import { NavLink } from 'react-router-dom'
-import { useMediaQuery } from 'react-responsive'
+import React from "react";
+import { useState, useEffect } from "react";
+import "./NavBar.scss";
+import { useMediaQuery } from "react-responsive";
 
-import { elastic as Menu, scaleDown } from 'react-burger-menu'
-import { NavHashLink } from 'react-router-hash-link';
-
-
+import { elastic as Menu } from "react-burger-menu";
+import { NavHashLink } from "react-router-hash-link";
 
 const NavBar = (props) => {
-  let [scroll, setScroll] = useState(false)
-  let [openToggle,setOpenToggle] = useState(false)
-  
+  let [scroll, setScroll] = useState(false);
+  let [openToggle, setOpenToggle] = useState(false);
 
   useEffect(() => {
-    document.addEventListener('scroll', () => {
+    document.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
-        setScroll(true)
+        setScroll(true);
       } else {
-        setScroll(false)
+        setScroll(false);
       }
-    })
-  })
+    });
+  });
 
-  const showSettings = (event) => {
-    event.preventDefault();
-
-  }
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
-
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1024px)" });
 
   const links = [
     {
-      label: 'Home',
-      value: '/#home'
+      label: "Home",
+      value: "/#home",
     },
     {
-      label: 'About',
-      value: '/#about'
+      label: "About",
+      value: "/#about",
     },
     {
       label: "Education",
-      value: "/#education"
+      value: "/#education",
     },
     {
-      label: 'Skills & Knowledge',
-      value: '/#skills'
+      label: "Skills & Knowledge",
+      value: "/#skills",
     },
     {
-      label: 'Projects',
-      value: '/#projects'
+      label: "Projects",
+      value: "/#projects",
     },
     {
-      label: 'Contact',
-      value: '/#contact'
+      label: "Contact",
+      value: "/#contact",
     },
-
-  ]
+  ];
 
   const scrollWidthOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -80; 
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
-}
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
 
-const handleNavClick = () => {
+  const handleNavClick = () => {
+    setOpenToggle(false);
+  };
 
-setOpenToggle(false)
-
-}
-
-const handleStateChange = (state) => {
-
-  setOpenToggle(state.isOpen)  
-  }
-
+  const handleStateChange = (state) => {
+    setOpenToggle(state.isOpen);
+  };
 
   return (
-
     <>
-      <div style={props.disabled ? {pointerEvents: "none",filter: 'blur(0.7px)'} : {}} className={scroll && !isTabletOrMobile ? 'nav navShadow' : 'nav'}>
-
-        <NavHashLink
-          smooth to="/#home" >
-          <span className='logo'>y</span>
-
+      <div
+        style={
+          props.disabled ? { pointerEvents: "none", filter: "blur(0.7px)" } : {}
+        }
+        className={scroll && !isTabletOrMobile ? "nav navShadow" : "nav"}
+      >
+        <NavHashLink smooth to="/#home">
+          <span className="logo">y</span>
         </NavHashLink>
 
-        {
-          isTabletOrMobile ?
-            <Menu
-              {...props}
-              right
-              isOpen={openToggle}
-              onStateChange={(state) => handleStateChange(state)}
-            >
-              {links.map((link, index) => {
-                return (
-                  <NavHashLink
+        {isTabletOrMobile ? (
+          <Menu
+            {...props}
+            right
+            isOpen={openToggle}
+            onStateChange={(state) => handleStateChange(state)}
+          >
+            {links.map((link, index) => {
+              return (
+                <NavHashLink
                   onClick={handleNavClick}
-                  scroll={el => scrollWidthOffset(el)}
-                    key={index}
-                    className="menu-item"
-                    smooth to={link.value}
-                    // activeClassName="selected"
-                    // activeStyle={{ color: 'white' }}
-                
-                  >
-                    {link.label}
-                  </NavHashLink>
-                )
-              })}
-
-            </Menu>
-            :
-            <div className='desktopNav'>
-              {links.map((link, index) => {
-                return (
-                  <NavHashLink
-                  scroll={el => scrollWidthOffset(el)}
-                    key={index}
-                    className="menu-item"
-                    smooth to={link.value}
-                    // activeClassName="selected"
-                    // activeStyle={{ color: 'white' }}
-                  >
-                    {link.label}
-                  </NavHashLink>
-                )
-              })}
-            </div>
-        }
+                  scroll={(el) => scrollWidthOffset(el)}
+                  key={index}
+                  className="menu-item"
+                  smooth
+                  to={link.value}
+                >
+                  {link.label}
+                </NavHashLink>
+              );
+            })}
+          </Menu>
+        ) : (
+          <div className="desktopNav">
+            {links.map((link, index) => {
+              return (
+                <NavHashLink
+                  scroll={(el) => scrollWidthOffset(el)}
+                  key={index}
+                  className="menu-item"
+                  smooth
+                  to={link.value}
+                >
+                  {link.label}
+                </NavHashLink>
+              );
+            })}
+          </div>
+        )}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

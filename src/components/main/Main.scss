@@ -1,49 +1,39 @@
-$bgColor: rgba(49,49,58,1);
+$bgColor: rgba(49, 49, 58, 1);
 $color: rgba(255, 255, 255, 0.5);
-$green:rgb(94, 255, 0);
+$green: rgb(94, 255, 0);
 
 .cvWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    
+  h1 {
+    text-align: center;
+    font-size: 100px;
+    color: #fff;
 
-    h1 {
-       text-align: center;
-        font-size: 100px;
-        color: #fff;
-      
-      
-        span {
-            color: $green;
-        }
-    
-
+    span {
+      color: $green;
     }
-    p {
-        padding: 15px 0 40px;
-        text-align: center;
-        color:$color;
-        font-size: 30px;
-        span {
-            animation: hide 0.6s infinite;
-            
-        }
-       
+  }
+  p {
+    padding: 15px 0 40px;
+    text-align: center;
+    color: $color;
+    font-size: 30px;
+    span {
+      animation: hide 0.6s infinite;
     }
-    
+  }
 }
 
-
-
-
-
-   
 @keyframes hide {
-    from {color:$color}
-    to {color:transparent}
+  from {
+    color: $color;
+  }
+  to {
+    color: transparent;
+  }
 }
-      

@@ -13,6 +13,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
+    "caniuse-lite": "^1.0.30001299",
     "email-validator": "^2.0.4",
     "formik": "^2.2.9",
     "google-map-react": "^2.1.9",

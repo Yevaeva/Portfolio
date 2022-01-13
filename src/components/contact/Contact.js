@@ -13,11 +13,6 @@ import { contactValidationSchema } from "../../helpers/validation";
 
 const Contact = () => {
   const [toggleModal, setToggleModal] = useState(true);
-  const [inputValue, setInputValue] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
@@ -123,7 +118,7 @@ const Contact = () => {
                             <label
                               onClick={() => nameRef.current.focus()}
                               className={`${
-                                inputValue.name ? "label fill" : "label"
+                                values.name ? "label fill" : "label"
                               }`}
                             >
                               Name *
@@ -143,7 +138,7 @@ const Contact = () => {
                             <label
                               onClick={() => emailRef.current.focus()}
                               className={`${
-                                inputValue.email ? "label fill" : "label"
+                                values.email ? "label fill" : "label"
                               }`}
                             >
                               Email *
@@ -163,7 +158,7 @@ const Contact = () => {
                         <label
                           onClick={() => messageRef.current.focus()}
                           className={`${
-                            inputValue.message ? "label fill" : "label"
+                            values.message ? "label fill" : "label"
                           }`}
                         >
                           Massage *
