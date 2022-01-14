@@ -43,8 +43,7 @@ const Modal = (props) => {
         title: "Messanger",
         about:
           "This is a class chat. You can register and log in, then  select or create a class and join a group chat ․" +
-          "You can see who are in the selected room online. It shows you when someone is typing. I write the front-end of a website and" +
-          " the back-end is a team work.",
+          "You can see who are in the selected room online. It shows you when someone is typing.",
         skills: "React.js, Node.js, Express, Mongo db, Socket.io",
         github: [
           "https://github.com/Yevaeva/Messanger",

@@ -106,7 +106,7 @@ const Contact = () => {
                     </div>
                     <div className="form">
                       <div className="side">
-                        <div>
+                        <div className="sideChild">
                           <div className="nameWrapper">
                             <input
                               ref={nameRef}
@@ -126,7 +126,7 @@ const Contact = () => {
                           </div>
                           <div className="required">{errors.name}</div>
                         </div>
-                        <div>
+                        <div className="sideChild">
                           <div className="emailWrapper">
                             <input
                               ref={emailRef}

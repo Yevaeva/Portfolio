@@ -11,7 +11,7 @@ $green: rgb(94, 255, 0);
   background-attachment: fixed;
 }
 .cover {
-  height: 35vh;
+  height: 25vh;
 }
 h2 {
   color: $green;
@@ -21,7 +21,7 @@ h2 {
 
 .about {
   position: absolute;
-  height: 70vh;
+  height: 50vh;
   width: 60%;
   left: 0;
   right: 0;
@@ -50,7 +50,6 @@ h2 {
 
     p {
       line-height: 1.3;
-      font-size: 14px;
     }
   }
   .cover {
@@ -58,34 +57,23 @@ h2 {
   }
 }
 
-@media only screen and (max-width: 810px) {
+@media only screen and (min-height: 850px) {
   .about {
     width: 75%;
-    height: 50vh;
-
-    p {
-      line-height: 1.3;
-      font-size: 14px;
-    }
+    height: 30vh;
   }
   .cover {
-    height: 25vh;
+    height: 15vh;
   }
 }
 @media only screen and (max-width: 768px) {
   .about {
     width: 86%;
-    height: 60vh;
+    height: 50vh;
     padding: 5px;
-
-    p {
-      line-height: 1.3;
-      font-size: 14px;
-      padding-top: 5px;
-    }
   }
   .cover {
-    height: 34vh;
+    height: 24vh;
   }
 }
 @media only screen and (max-width: 420px) {
@@ -96,7 +84,6 @@ h2 {
 
     p {
       line-height: 1.3;
-      font-size: 14px;
       padding-top: 5px;
     }
   }

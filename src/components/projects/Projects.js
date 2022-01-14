@@ -77,7 +77,7 @@ const Projects = (props) => {
         </div>
         {projects.map((project, key) => {
           return (
-            <div className="item">
+            <div className="item" key={key}>
               <div
                 className="imgWrap"
                 id={key + 1}

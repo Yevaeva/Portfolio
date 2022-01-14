@@ -107,6 +107,9 @@ $green: rgb(94, 255, 0);
   justify-content: space-between;
   width: 90%;
   margin: auto;
+  .sideChild {
+    width: 45%;
+  }
 }
 
 .nameWrapper,
@@ -200,7 +203,7 @@ $green: rgb(94, 255, 0);
 
 @media only screen and (max-height: 1000px) {
   .map {
-    height: 60vh;
+    height: 70vh;
   }
 }
 @media only screen and (max-height: 780px) {
