@@ -14,20 +14,20 @@ const Projects = (props) => {
   const [id, setId] = useState("");
   const projects = [
     {
-      image: classchat,
-      name: "Messanger",
-    },
-    {
-      image: tictac,
-      name: "Tic Tac Toe",
-    },
-    {
       image: responsive,
       name: "Responsive website",
     },
     {
       image: clientlist,
       name: "Client list",
+    },
+    {
+      image: classchat,
+      name: "Messanger",
+    },
+    {
+      image: tictac,
+      name: "Tic Tac Toe",
     },
   ];
 
@@ -98,44 +98,6 @@ const Projects = (props) => {
             </div>
           );
         })}
-        {/* <div className="item">
-          <div className="imgWrap" id="2" onClick={(e) => handleToggle(e)}>
-            <img src={img1} />
-            <div className="overlay">
-              <div className="text">
-                <FontAwesomeIcon icon={faSearchPlus} size="2x" color="white" />
-              </div>
-            </div>
-          </div>
-          <p>Messanger</p>
-        </div>
-        <div className="item">
-          <div className="imgWrap" id="3" onClick={(e) => handleToggle(e)}>
-            <img src={tictac} />
-            <div className="overlay">
-              <div className="text">
-                <FontAwesomeIcon icon={faSearchPlus} size="2x" color="white" />
-              </div>
-            </div>
-          </div>
-          <p>Tic Tac Toe</p>
-        </div> */}
-        {/* <div className='item'>
-                    <div
-                        className='imgWrap'
-                        id='4'
-                        onClick={(e) => handleToggle(e)}
-                    >
-                        <img src={portfolio} />
-                        <div className="overlay">
-                            <div className="text">
-                                <FontAwesomeIcon icon={faSearchPlus} size='2x' color='white' />
-
-                            </div>
-                        </div>
-                    </div>
-                    <p>Portfolio</p>
-                </div> */}
       </div>
       {toggleModal && <Modal id={id} handleToggle={handleToggle} />}
     </div>

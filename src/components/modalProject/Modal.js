@@ -40,6 +40,28 @@ const Modal = (props) => {
       },
       {
         id: 1,
+        title: "Responsive website",
+        about:
+          "It is a full responsive website created with pure javascript and scss",
+        skills: "JavaScript, HTML, CSS",
+        github: ["https://github.com/Yevaeva/responsive-website/tree/master"],
+        link: "https://yevaeva.github.io/client-list/",
+      },
+      {
+        id: 2,
+        title: "Client List",
+        about:
+          "It is list of clients. Every client has email, phone and providers. You can create, edit and delete clients. Also you can add new provider, edit or delete it.",
+        skills:
+          "React.js, Redux, React Bootstrap, RESTful APIs, Node.js, Express, MongoDB",
+        github: [
+          "https://github.com/Yevaeva/client-list",
+          "https://github.com/Yevaeva/client-list-api",
+        ],
+        link: "https://yevaeva.github.io/client-list/",
+      },
+      {
+        id: 3,
         title: "Messanger",
         about:
           "This is a class chat. You can register and log in, then  select or create a class and join a group chat ․" +
@@ -52,34 +74,13 @@ const Modal = (props) => {
         link: "https://yevaeva.github.io/Messanger/",
       },
       {
-        id: 2,
+        id: 4,
         title: "Tic Tac Toe",
         about:
           'Tic-tac-toe is a game in which two players take turns in drawing either an "O" or an "X" in one square of a grid consisting of nine squares. The winner is the first player to get three of the same symbols in a row.',
         skills: "JavaScript, HTML, CSS",
         github: ["https://codepen.io/yevaeva/pen/poRvqxr"],
         link: "https://codepen.io/yevaeva/full/poRvqxr",
-      },
-      {
-        id: 3,
-        title: "Responsive website",
-        about:
-          "It is a full responsive website created with pure javascript and scss",
-        skills: "JavaScript, HTML, CSS",
-        github: ["https://github.com/Yevaeva/responsive-website/tree/master"],
-        link: "https://yevaeva.github.io/client-list/",
-      },
-      {
-        id: 4,
-        title: "Client List",
-        about: "It is client list",
-        skills:
-          "React.js, Redux, React Bootstrap, RESTful APIs, Node.js, Express, MongoDB",
-        github: [
-          "https://github.com/Yevaeva/client-list",
-          "https://github.com/Yevaeva/client-list-api",
-        ],
-        link: "https://yevaeva.github.io/client-list/",
       },
       {
         id: 5,
