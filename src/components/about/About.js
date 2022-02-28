@@ -13,7 +13,7 @@ const About = () => {
           <div className="about">
             <h2>Who am I</h2>
             <p>
-              Hi, I am a junior Web developer with a passion for web application
+              Hi, I am a Web developer with a passion for web application
               development. Skilled at writing well-designed, testable and
               efficient code using current best practices in Web development.
               I'm always in for learning new stuff, seeking to improve and grow

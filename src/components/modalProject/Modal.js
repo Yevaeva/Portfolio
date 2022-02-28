@@ -45,7 +45,7 @@ const Modal = (props) => {
           "It is a full responsive website created with pure javascript and scss",
         skills: "JavaScript, HTML, CSS",
         github: ["https://github.com/Yevaeva/responsive-website/tree/master"],
-        link: "https://yevaeva.github.io/client-list/",
+        link: "https://yevaeva.github.io/responsive-website/",
       },
       {
         id: 2,

@@ -5,7 +5,12 @@ import { useMediaQuery } from "react-responsive";
 const Education = () => {
   const eduLists = [
     {
-      year: "01.07.2021-Present",
+      year: "02.2022-Present",
+      where: "Beeweb",
+      about: "React.js Developer",
+    },
+    {
+      year: "07.2021-02.2022",
       where: "Preezma",
       about: "Full Stack Developer",
     },
